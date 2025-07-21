@@ -1,0 +1,21 @@
+#microservicio
+server.servlet.context-path=/companies-crud 
+
+
+server.port=8088
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.show-sql=true
+spring.h2.console.enabled=true
+
+#para crear las tablas automaticamente desde los entities
+#spring.jpa.hibernate.ddl-auto=create  
+
+spring.jpa.defer-datasource-initialization=true
+ 
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
