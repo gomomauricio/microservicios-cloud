@@ -1,0 +1,26 @@
+server:
+  port: 7777
+
+spring:
+  profiles:
+    active: default
+  application:
+    name: config-serer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gomomauricio/microservicios-cloud.git
+          default-label: dev
+          clone-on-start: true
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/   
+
+
+
+
